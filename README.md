@@ -1,4 +1,4 @@
-# Hello WebApp Micro-Frontend
+# Doppler SMS Micro-Frontend
 
 It is a POC for adding a new WebApp to Doppler complementing the [new WebApp](https://github.com/FromDoppler/doppler-webapp) (`app.fromdoppler.com`)
 and the [old MVC UI](https://github.com/MakingSense/Doppler/tree/develop/Doppler.Presentation.MVC) (`app2.fromdoppler.com`).
