@@ -150,7 +150,7 @@ We know that this application is not a micro-service, but we believe that this p
 
 For that reason, we want to generate a bundle and share it as it is in all our different environments.
 It requires to inject the configuration from the outside, in our case we choose using an object in
-the global `window` scope with the name `doppler-sms-mfe-configuration`.
+the global `window` scope with the name `doppler-sms-webapp-configuration`.
 
 Production's `index.html` example:
 
@@ -162,9 +162,9 @@ Production's `index.html` example:
     <!-- . . . -->
     <script src="https://cdn.fromdoppler.com/mfe-loader/loader-v2.0.0.js"></script>
     <script type="text/javascript">
-      const scriptUrl = "https://cdn.fromdoppler.com/doppler-sms-mfe/asset-manifest-v1.json`;
+      const scriptUrl = "https://cdn.fromdoppler.com/doppler-sms-webapp/asset-manifest-v1.json`;
 
-      window["doppler-sms-mfe-configuration"] = {
+      window["doppler-sms-webapp-configuration"] = {
         basename: "hello",
         dopplerLegacyBaseUrl: "https://app2.fromdoppler.com",
         htmlEditorApiBaseUrl: "https://apis.fromdoppler.com/html-editor",

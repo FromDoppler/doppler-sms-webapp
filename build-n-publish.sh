@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pkgName="doppler-sms-mfe"
+pkgName="doppler-sms-webapp"
 cdnBaseUrl="https://cdn.fromdoppler.com"
 commit=""
 name=""
