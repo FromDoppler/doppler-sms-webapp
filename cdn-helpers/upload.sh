@@ -18,7 +18,7 @@ print_help () {
     echo "  -p, --port (Default value: 22)"
     echo
     echo "Examples:"
-    echo "  sh upload.sh --port 22 --destination=cdndoppler@reporting.fromdoppler.com:/cdndoppler/doppler-sms-mfe/"
+    echo "  sh upload.sh --port 22 --destination=cdndoppler@reporting.fromdoppler.com:/cdndoppler/doppler-sms-webapp/"
 }
 
 for i in "$@" ; do

@@ -13,7 +13,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { DopplerIntlProvider } from "./components/i18n/DopplerIntlProvider";
 
 const customConfiguration =
-  (window as any)["doppler-sms-mfe-configuration"] || {};
+  (window as any)["doppler-sms-webapp-configuration"] || {};
 
 const appServices = configureApp(customConfiguration);
 
