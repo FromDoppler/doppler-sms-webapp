@@ -1,6 +1,5 @@
 import React from "react";
-import { usePagination, DOTS } from "./usePagination";
-
+import { getPaginationRange, DOTS } from "./getPaginationRange";
 export interface PaginationInterface {
   totalCount: number;
   pageSize: number;
@@ -14,11 +13,12 @@ const Pagination: React.FC<PaginationInterface> = ({
   currentPage,
   onPageChange,
 }) => {
-  const { paginationRange } = usePagination({
+  const paginationRange = getPaginationRange({
     totalCount,
     pageSize,
     currentPage,
   });
+
   const onNext = () => {
     onPageChange(currentPage + 1);
   };
@@ -58,7 +58,7 @@ const Pagination: React.FC<PaginationInterface> = ({
               );
             return (
               <li key={index}>
-                <button type="button" onClick={() => onPageChange(pageNumber)}>
+                <button type="button" onClick={() => onPageChange(+pageNumber)}>
                   {pageNumber}
                 </button>
               </li>
