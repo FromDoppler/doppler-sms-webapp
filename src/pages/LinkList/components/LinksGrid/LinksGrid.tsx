@@ -51,12 +51,14 @@ const LinksGrid: React.FC<LinksGridInterface> = () => {
                 <tfoot>
                   <tr>
                     <td colSpan={3}>
-                      <Pagination
-                        currentPage={currentPage}
-                        totalCount={totalCount}
-                        pageSize={pageSize}
-                        onPageChange={(page: number) => setCurrentPage(page)}
-                      />
+                      {totalCount > pageSize ? (
+                        <Pagination
+                          currentPage={currentPage}
+                          totalCount={totalCount}
+                          pageSize={pageSize}
+                          onPageChange={(page: number) => setCurrentPage(page)}
+                        />
+                      ) : null}
                     </td>
                   </tr>
                 </tfoot>
