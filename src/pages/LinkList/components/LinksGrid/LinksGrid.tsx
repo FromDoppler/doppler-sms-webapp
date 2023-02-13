@@ -1,15 +1,18 @@
 import React from "react";
+import { useState } from "react";
 import { useLinks } from "./hooks/useLinks";
 import { LinkRow, NavBar } from "./components";
+import { Pagination } from "./../../../../custom-components/Pagination";
 import { FormattedMessage } from "react-intl";
 
 export interface LinksGridInterface {}
 const LinksGrid: React.FC<LinksGridInterface> = () => {
   const pageSize = 5;
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const { filteredLinks } = useLinks({
+  const { filteredLinks, totalCount } = useLinks({
     pageSize,
-    currentPage: 1,
+    currentPage,
   });
 
   return (
@@ -47,7 +50,16 @@ const LinksGrid: React.FC<LinksGridInterface> = () => {
                 </tbody>
                 <tfoot>
                   <tr>
-                    <td colSpan={3}>pagination component here</td>
+                    <td colSpan={3}>
+                      {totalCount > pageSize ? (
+                        <Pagination
+                          currentPage={currentPage}
+                          totalCount={totalCount}
+                          pageSize={pageSize}
+                          onPageChange={(page: number) => setCurrentPage(page)}
+                        />
+                      ) : null}
+                    </td>
                   </tr>
                 </tfoot>
               </table>
