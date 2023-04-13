@@ -38,7 +38,7 @@ pipeline {
         }
         stage('Publish in our CDN') {
             environment {
-                PKG_NAME = "doppler-sms-webapp${PACKAGE_SUFFIX}"
+                PKG_NAME = "doppler-sms-webapp"
             }
             stages {
                 stage('Publish pre-release packages from pull request') {
