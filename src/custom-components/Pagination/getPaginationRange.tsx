@@ -36,7 +36,7 @@ export const getPaginationRange = ({
   const leftSiblingIndex = Math.max(currentPage - siblingCount, 1);
   const rightSiblingIndex = Math.min(
     currentPage + siblingCount,
-    totalPageCount
+    totalPageCount,
   );
   /*
         We do not show dots just when there is just one page number to be inserted between

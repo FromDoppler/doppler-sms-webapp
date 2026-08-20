@@ -13,7 +13,7 @@ describe("<Pagination />", () => {
         totalCount={totalCount}
         pageSize={pageSize}
         onPageChange={jest.fn()}
-      />
+      />,
     );
 
     const navEl = screen.queryByLabelText("Pagination");
@@ -46,7 +46,7 @@ describe("<Pagination />", () => {
         totalCount={totalCount}
         pageSize={pageSize}
         onPageChange={jest.fn()}
-      />
+      />,
     );
 
     const navEl = screen.queryByLabelText("Pagination");
@@ -81,7 +81,7 @@ describe("<Pagination />", () => {
         totalCount={totalCount}
         pageSize={pageSize}
         onPageChange={jest.fn()}
-      />
+      />,
     );
 
     const navEl = screen.queryByLabelText("Pagination");
@@ -116,7 +116,7 @@ describe("<Pagination />", () => {
         totalCount={totalCount}
         pageSize={pageSize}
         onPageChange={jest.fn()}
-      />
+      />,
     );
 
     const navEl = screen.queryByLabelText("Pagination");
@@ -153,7 +153,7 @@ describe("<Pagination />", () => {
         totalCount={totalCount}
         pageSize={pageSize}
         onPageChange={setCurrentPageMock}
-      />
+      />,
     );
 
     expect(setCurrentPageMock).not.toBeCalled();
