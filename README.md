@@ -201,8 +201,8 @@ Example:
 
 ```sh
 sh build-n-publish.sh \
-  --package=${PKG_NAME} \
-  --commit=${GIT_COMMIT} \
-  --name=main
-  --skip-clean
+    --package=${PKG_NAME} \
+    --commit=${GIT_COMMIT} \
+    --name=main \
+    --skip-clean
 ```

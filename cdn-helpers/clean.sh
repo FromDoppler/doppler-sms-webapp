@@ -20,8 +20,8 @@ print_help () {
     echo "  -h, --help"
     echo ""
     echo "Examples:"
-    echo "  sh clean.sh --port=22 --destination=cdndoppler@reporting.fromdoppler.com:/cdndoppler/editors-webapp/ --environment=main"
-    echo "  sh clean.sh --port=22 --destination=cdndoppler@reporting.fromdoppler.com:/cdndoppler/editors-webapp/ --environment=pr --keep-days=7"
+    echo "  sh clean.sh --port=22 --destination=cdndoppler@reporting.fromdoppler.com:/cdndoppler/doppler-sms-webapp/ --environment=main"
+    echo "  sh clean.sh --port=22 --destination=cdndoppler@reporting.fromdoppler.com:/cdndoppler/doppler-sms-webapp/ --environment=pr --keep-days=7"
 }
 
 for i in "$@" ; do
